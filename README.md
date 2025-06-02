@@ -1,7 +1,3 @@
-Definitely — here's your updated **README** with the **basic example and its output** included for clarity:
-
----
-
 ## **Data Mixing Library**
 
 A Python library for combining multiple datasets using customizable algorithms. It offers a flexible framework to control the contribution of each dataset in the final output.
