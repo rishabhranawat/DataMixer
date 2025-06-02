@@ -15,8 +15,13 @@ class DataMixingAlgorithm(ABC):
         self.rng = np.random.default_rng(seed)
 
     @abstractmethod
-    def compute_proportions(self, datasets: List['Dataset']) -> Dict[str, float]:
-        """Compute the proportions of each dataset in the mixed dataset."""
+    def compute_proportions(self, datasets: List['Dataset'], **kwargs) -> Dict[str, float]:
+        """Compute the proportions of each dataset in the mixed dataset.
+        
+        Args:
+            datasets: List of datasets to mix
+            **kwargs: Additional arguments specific to the mixing algorithm
+        """
         pass
     
     def validate_proportions(self, proportions: Dict[str, float]) -> None:

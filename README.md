@@ -37,3 +37,9 @@ print(mixer.proportions)
 print(len(mixed_dataset.samples))
 # 6000
 ```
+## Supported Algorithms
+
+| Algorithm | Description | Paper |
+|-----------|-------------|-------|
+| UniMax | Fair and effective language sampling for multilingual pretraining | [Chung et al. (2023)](https://arxiv.org/abs/2304.09151) |
+| UtiliMax | Optimizing pretraining data mixtures with LLM-estimated utility | [Held et al. (2025)](https://arxiv.org/abs/2501.11747) |

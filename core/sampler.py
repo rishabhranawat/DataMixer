@@ -31,9 +31,9 @@ class DataMixer:
         return self._rng
 
 
-    def mix(self) -> Dataset:
+    def mix(self, **kwargs) -> Dataset:
         """Mix the datasets according to the algorithm."""
-        proportions = self._algorithm.compute_proportions(self._datasets)
+        proportions = self._algorithm.compute_proportions(self._datasets, **kwargs)
         self._proportions = proportions
     
        

@@ -34,10 +34,13 @@ def main():
             max_epochs_per_language=2))
     mixer.mix()
 
-    print(mixer.proportions)
+    print("Computed mixing proportions:")
+    for dataset_name, proportion in mixer.proportions.items():
+        print(f"{dataset_name}: {proportion:.3f}")
+
 
     mixed_dataset = mixer.sample(datasets=[dataset1, dataset2, dataset3], output_size=6000)
-    print(len(mixed_dataset.samples))
+    print(f"\nCreated mixed dataset with {mixed_dataset.size} samples")
 
 if __name__ == "__main__":
     main()
